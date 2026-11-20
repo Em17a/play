@@ -1,0 +1,16 @@
+[build]
+  publish = "public"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# 保留旧链接：访问旧文件名时跳转到首页
+[[redirects]]
+  from = "/nightplay_preview.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/nightplay_preview"
+  to = "/"
+  status = 301

@@ -1,0 +1,14 @@
+Nightplay 完整部署说明
+
+不要只上传 public 子目录。
+
+推荐：
+1. 解压 ZIP。
+2. 把完整目录提交到 GitHub。
+3. Netlify → Add new project → Import an existing project → 选择仓库。
+4. Publish directory: public；Node 24。
+5. 在 Netlify 中关联 Database 并执行迁移。
+6. 部署后检查构建日志，确认 netlify/server/index.ts 被构建。
+7. 使用两台设备访问 HTTPS 同一房间，分别点击开启麦克风。
+
+Netlify Drop 普通静态拖放只发布静态文件，不会启动本项目的 WebSocket/数据库后端。若部署日志没有构建 Server，聊天/语音无法工作。
